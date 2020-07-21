@@ -54,14 +54,16 @@ class _HomePageState extends State<HomePage> {
       body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Container(
-          width: 500,
+          width: MediaQuery.of(context).size.width * 0.5,
           child: TextField(
             controller: _textEditingController,
             decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: "Enter a keyword for advice"),
           ),
+          
         ),
+        SizedBox(height: 20,),
         RaisedButton(
           onPressed: () {
             if (_textEditingController.text.isEmpty) {
